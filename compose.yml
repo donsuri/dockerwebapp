@@ -6,7 +6,6 @@ container_name: db-container
 image: suri1998/myrepo:suri2
 ports:
 -"3306:3306"
-
 applicationservice:
 container_name: app-container
 image: suri1998/myrepo:suri1
