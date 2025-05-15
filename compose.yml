@@ -1,14 +1,16 @@
 ---
 version: "3"
 services:
-dbservice:
-container_name: db-container
-image: suri1998/myrepo:suri2
-ports:
--"3306:3306"
-applicationservice:
-container_name: app-container
-image: suri1998/myrepo:suri1
-ports:
--"1234:8080"
-...
+ devopsdb:
+   container_name: devopsdb
+   image: suri1998/myrepo:suri1
+   ports:
+     - "3306:3306"
+
+ application:
+   image: suri1998/myrepo:suri2
+   container_name: containerapp
+   ports:
+     - "1234:8080"
+   
+
